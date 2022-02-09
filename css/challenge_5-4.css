@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    font-weight: 800;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color:black;
+    font-weight: 700;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+img {
+    display: block;
+    margin: auto;
+    height:400px;
+    width:400px;
+    border: 4px solid rgb(138, 33, 138);
+    
+}
+
+.text-overlay {
+    position: absolute;
+    top:90%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+}
