@@ -1,0 +1,18 @@
+
+
+
+
+.submission form {
+    border-style: groove;
+    text-align: center;
+    font-weight: 700;
+    background-color: bisque;
+    border-radius: 10%;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 2px 1px 2px 0.5 grey;
+}
