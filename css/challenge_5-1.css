@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+img {
+    filter: sepia(100%);
+    margin: auto;
+    border-radius: 5%;
+    display: block;
+    height: 200px;
+    width: 200px;
+
+}
