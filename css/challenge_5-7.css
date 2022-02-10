@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(10, 40, 41);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em purple;
+    margin-top: 0;
+    padding-top:8px ;
+    text-decoration: underline;
+}
+
+p {
+    color:#fff;
+    font-weight: 500;
+    font-size: medium;
+    text-align: center;
+    
+}
+
+p:hover {
+    color:aqua;
+    text-shadow: 2px 2px 1px black, 0 0 1em purple;
+    cursor: pointer;
+    font-size: x-large;
+}

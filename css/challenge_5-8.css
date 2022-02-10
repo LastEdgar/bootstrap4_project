@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s ease-in;
+    background-color: rgb(35, 150, 54);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #fff;
+    font-weight: 800;
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(0%, 400%);
+    -webkit-transform: translate(0%, 400%);
+    -ms-transform: translate(0%, 400%);
+}
