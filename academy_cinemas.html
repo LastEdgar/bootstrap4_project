@@ -151,9 +151,34 @@
            
         </div>
 
-        <!--/showtimes                style="padding-left: 1em; padding-right: 1em;padding-top: 1em;"
-        
-        -->
+        <!--/showtimes-->
+
+        <!--Movie Deals Jumbo-->
+        <div class="p-5 mb-4 bg-dark rounded-3 text-white">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Movie Deals</h1>
+                <p class="col-md-8 fs-4">"Sign up here for more great rewards."</p>
+                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#register">See our monthly movie deals!</button>
+                <button type="button" class="btn btn-primary btn-lg" id="liveToastBtn">First Visit?</button> <!-- Toast button challenge #26-->
+                
+                <div class="position-fixed bottom-0 end-0 p-3 bg-dark text-white" style="z-index: 11">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header  bg-dark text-white">
+                            <img src="" class="rounded me-2" alt="">
+                            <strong class="me-auto bg-dark text-white">Welcome!</strong>
+                            <small>1 minute ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body bg-dark text-white">
+                            Hello, and welcome to Academy Cinemas! If this is your first time here please enter code "TenOff!" at
+                            checkout for a 10% discount on your order!.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End Jumbo-->
 
         <div class="text-center">
             <form>
@@ -162,12 +187,57 @@
                     
                     <input type="email" class="form-control" style="background-color: rgb(223, 228, 233);" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-        
-                <button type="submit" class="btn btn-primary">Submit</button>
+                
+                <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-bs-container="body" data-bs-toggle="popover"
+                    data-bs-placement="bottom" data-bs-content="Submit your email to receive great movie reward offers!">
+                    Sign Up
+                </button>
             </form>
 
         </div>
 
+        <!-- Form modal here-->
+
+        <div class="modal" tabindex="-1" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Register to receive movie deals</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="fname" class="form-control" id="floatingFName" placeholder="First Name">
+                                <label for="floatingInput">First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="lname" class="form-control" id="floatingLName" placeholder="Last Name">
+                                <label for="floatingPassword">Last Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="Your Email">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Your Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save and Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- Footer-->
         <div class="container my-5" id="deals">
             <ul class="nav">
                 <li class="nav-item">
@@ -203,6 +273,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script>
+        var toastTrigger = document.getElementById('liveToastBtn') //Toast Script
+            var toastLiveExample = document.getElementById('liveToast')
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    var toast = new bootstrap.Toast(toastLiveExample)
+
+                    toast.show()
+                })
+            }
+    </script>
+    <script> //Popover script
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+                trigger: 'focus'
+            })
+    </script>
 </body>
 
 </html>
